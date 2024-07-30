@@ -60,12 +60,6 @@ if (isset($_POST['brand']) && isset($_POST['name']) && isset($_POST['colour']) &
     $cost = $_POST['cost'];
     $image = $_POST['image'];
 
-    $shoe['brand'] = $brand;
-    $shoe['name'] = $name;
-    $shoe['colour'] = $colour;
-    $shoe['cost'] = $cost;
-    $shoe['image'] = $image;
-
     $query = $db->prepare("INSERT INTO `shoes` (`brand`, `name`, `colour`, `cost`, `image`) VALUES (:brand, :name, :colour, :cost, :image);");
 
     $query->bindParam(':brand', $brand);

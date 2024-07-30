@@ -27,11 +27,6 @@ require_once 'db.php';
         echo "</div>";
     }
         echo "<div class=box> <a href='form.php'><h1>Add<br>Shoe<br>+</h1></a></div>";
-
-
-
-
-
 ?>
 
 </body>
