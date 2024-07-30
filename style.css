@@ -9,13 +9,22 @@ body {
 nav {
     background-color: white;
     color: cadetblue;
-
 }
+
 
 h1 {
     text-align: center;
     text-transform: uppercase;
-    padding: 2rem;
+    padding-bottom: 0;
+    padding-top: 2rem;
+    letter-spacing: 0.3rem;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    font-weight: 400;
 }
 
 .container {
@@ -27,6 +36,16 @@ h1 {
     margin-bottom: 2rem;
 }
 
+hr {
+    border: solid 1px lightgrey;
+    width: 98%;
+    margin-top: 0;
+}
+
+.brand {
+    text-transform: uppercase;
+}
+
 .box {
     display: flex;
     justify-content: space-between;
@@ -36,6 +55,8 @@ h1 {
     width: 15rem;
     height: 25rem;
     border-radius: 5%;
+    border: lightgray;
+    padding-bottom: 1rem;
 }
 
 .box h4 {
@@ -47,7 +68,7 @@ h1 {
 }
 .box h1 {
     color: cadetblue;
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 img {
@@ -57,6 +78,55 @@ img {
     object-fit: cover;
     background-color: white;
 }
+
+/*Form page*/
+
+form a {
+    font-size: 1rem;
+    padding: 0;
+    margin-left: 18rem;
+    justify-content: center;
+    color: black;
+}
+
+form h4 {
+    text-align: center;
+    margin-top: 0;
+
+}
+
+form {
+    align-items: center;
+    padding: 1rem 3rem;
+    justify-content: normal;
+    width: 50%;
+    margin: auto;
+}
+
+.btn {
+    background-color: cadetblue;
+    color: white;
+    border-radius: 5%;
+    border: none;
+    padding: 0.5rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+
+}
+
+form input {
+    padding: 0.2rem;
+    margin-left: 1rem;
+
+}
+
+form div {
+    display: flex;
+    align-items: center;
+}
+
 
 @media screen and (min-width: 640px) {
     .container {

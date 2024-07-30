@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <title>Crep Collector</title>
+    <title>Trainer Tracker</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
@@ -8,33 +8,27 @@
 <body>
 <nav>
     <h1>Trainer Tracker</h1>
+    <h3>A virtual place to store your shoes...</h3>
 </nav>
-
 
 <?php
 
-$db = new PDO('mysql:host=db; dbname=shoes', 'root', 'password');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-$query = $db->prepare('SELECT `brand`, `name`, `color`, `cost`, `image` FROM `shoes`');
-$query->execute();
-$results = $query->fetchAll();
+require_once 'db.php';
 
 echo "<div class=container>";
 
 foreach ($results as $shoe)
 {
     echo "<div class=box>";
-    echo '<img src=' . $shoe['image'] . '>' . "\n";
-    echo "<h4>" . $shoe['brand'] . "</h4>";
-    echo "<h4>" . $shoe['name'] . "</h4>\n";
-    echo "<h4>Colour: " . $shoe['color'] . "</h4>\n";
-    echo "<h4>£" . $shoe['cost'] . "</h4>\n";
+    echo '<img src=' . $shoe['image'] . '>';
+    echo '<hr>';
+    echo "<h4 class='brand'>" . $shoe['brand'] . ' ~ '.$shoe['name'] . "</h4>";
+    echo "<h4>Colour: " . $shoe['colour'] . "</h4>";
+    echo "<h4>Price: £" . $shoe['cost'] . "</h4>";
     echo "</div>";
 }
 echo "<div class=box> 
-        <a href='#'><h1>Add <br>Shoe +</h1></a>";
+        <a href='form.php'><h1>Add<br>Shoe<br>+</h1></a>";
 
 echo "</div>";
 
