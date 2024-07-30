@@ -18,22 +18,22 @@ require_once 'db.php';
         <a href="index.php">ⅹ</a>
         <h4>Add shoe to your collection: </h4>
     <div class="label">
-        <label for="brandID">Brand: </label>
+        <label for="brandID">Brand: <p class="required">required</p></label>
         <input required id="brandID" name="brand" type="text" placeholder="e.g. Adidas">
     </div>
     <br>
     <div>
-        <label for="nameID">Name: </label>
+        <label for="nameID">Name: <p class="required">required</p></label>
         <input required id="nameID" name="name" type="text" placeholder="e.g. Sambas">
     </div>
     <br>
     <div>
-        <label for="colourID">Colour: </label>
+        <label for="colourID">Colour: <p class="required">required</p></label>
         <input required id="colourID" name="colour" type="text" placeholder="e.g. Blue">
     </div>
     <br>
     <div>
-        <label for="costID">Cost (£): </label>
+        <label for="costID">Cost (£): <p class="required">required</p></label>
         <input required id="costID" name="cost" type="number" placeholder="e.g. 80">
     </div>
     <br>
@@ -41,6 +41,7 @@ require_once 'db.php';
         <label for="imgID">Image: </label>
         <input id="imgID" name="image" type="text" placeholder="e.g. adidasSambas.png">
     </div>
+
     <br>
     <div>
         <input type="submit" class="btn">
@@ -59,13 +60,6 @@ if (isset($_POST['brand']) && isset($_POST['name']) && isset($_POST['colour']) &
     $cost = $_POST['cost'];
     $image = $_POST['image'];
 
-    $shoe['brand'] = $brand;
-    $shoe['name'] = $name;
-    $shoe['colour'] = $colour;
-    $shoe['cost'] = $cost;
-    $shoe['image'] = $image;
-
-
     $query = $db->prepare("INSERT INTO `shoes` (`brand`, `name`, `colour`, `cost`, `image`) VALUES (:brand, :name, :colour, :cost, :image);");
 
     $query->bindParam(':brand', $brand);
@@ -76,4 +70,5 @@ if (isset($_POST['brand']) && isset($_POST['name']) && isset($_POST['colour']) &
 
     $query->execute();
 }
+
 ?>

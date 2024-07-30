@@ -15,23 +15,18 @@
 
 require_once 'db.php';
 
-echo "<div class=container>";
-
-foreach ($results as $shoe)
-{
-    echo "<div class=box>";
-    echo '<img src=' . $shoe['image'] . '>';
-    echo '<hr>';
-    echo "<h4 class='brand'>" . $shoe['brand'] . ' ~ '.$shoe['name'] . "</h4>";
-    echo "<h4>Colour: " . $shoe['colour'] . "</h4>";
-    echo "<h4>Price: £" . $shoe['cost'] . "</h4>";
-    echo "</div>";
-}
-echo "<div class=box> 
-        <a href='form.php'><h1>Add<br>Shoe<br>+</h1></a>";
-
-echo "</div>";
-
+    echo "<div class=container>";
+    foreach ($results as $shoe)
+    {
+        echo "<div class=box>";
+        echo '<img src=' . $shoe['image'] . '>';
+        echo '<hr>';
+        echo "<h4 class='brand'>" . $shoe['brand'] . ' ~ '.$shoe['name'] . "</h4>";
+        echo "<h4>Colour: " . $shoe['colour'] . "</h4>";
+        echo "<h4>Price: £" . $shoe['cost'] . "</h4>";
+        echo "</div>";
+    }
+        echo "<div class=box> <a href='form.php'><h1>Add<br>Shoe<br>+</h1></a></div>";
 ?>
 
 </body>

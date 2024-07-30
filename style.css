@@ -79,6 +79,7 @@ img {
     background-color: white;
 }
 
+
 /*Form page*/
 
 form a {
@@ -125,6 +126,13 @@ form input {
 form div {
     display: flex;
     align-items: center;
+}
+
+.required {
+    margin: 0;
+    font-weight: 300;
+    font-size: 0.5rem;
+    font-style: italic;
 }
 
 
