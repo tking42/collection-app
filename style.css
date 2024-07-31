@@ -3,27 +3,30 @@ body {
     margin: 0;
     background-color: cadetblue;
     color: white;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: "Archivo Black", sans-serif;
 }
 
 nav {
     background-color: white;
+
     color: cadetblue;
+    margin-bottom: 2rem;
+    padding: 2rem;
+
 }
 
-
 h1 {
+    font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 0;
-    padding-top: 2rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.5rem;
 }
 
 h3 {
+
     text-align: center;
     padding-top: 0;
-    padding-bottom: 2rem;
     font-weight: 400;
 }
 
@@ -33,7 +36,7 @@ h3 {
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
-    margin-bottom: 2rem;
+    font-weight: 400;
 }
 
 hr {
@@ -51,7 +54,7 @@ hr {
     justify-content: space-between;
     flex-direction: column;
     background-color: white;
-    color: black;
+    color: #5a5a5a;
     width: 15rem;
     height: 25rem;
     border-radius: 5%;
@@ -93,7 +96,7 @@ form a {
 form h4 {
     text-align: center;
     margin-top: 0;
-
+    color: black;
 }
 
 form {
@@ -117,10 +120,15 @@ form {
 
 }
 
+form select {
+    padding: 0.2rem;
+    margin-left: 1rem;
+    width: 9rem
+}
+
 form input {
     padding: 0.2rem;
     margin-left: 1rem;
-
 }
 
 form div {
@@ -135,12 +143,25 @@ form div {
     font-style: italic;
 }
 
+    label {
+        font-family: sans-serif;
+        color: black;
+    }
+
+
 
 @media screen and (min-width: 640px) {
+
     .container {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 4rem;
+        margin: 2rem 5rem;
+    }
+
+    nav form {
+        display: flex;
+        justify-content: center;
     }
 }
 
