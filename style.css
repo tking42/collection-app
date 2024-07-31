@@ -15,6 +15,23 @@ nav {
 
 }
 
+.sort {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sort select {
+    border-radius: 10%;
+    border: none;
+    margin-top: 1rem;
+}
+
+.sort label {
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    letter-spacing: 0.1rem;
+}
+
 h1 {
     font-size: 2rem;
     text-align: center;

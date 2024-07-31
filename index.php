@@ -12,13 +12,19 @@
         <h1>Trainer Tracker</h1>
         <h3>A virtual room to store your shoes...</h3>
     </div>
-<!--    <div>-->
-<!--        <form>-->
-<!--            <input id="searchID" name="search" type="text" placeholder="Search">-->
-<!--        </form>-->
-<!--    </div>-->
 </nav>
 <main>
+    <div class="sort">
+        <form method="post" action="index.php">
+            <label for="sortID">Sort By: </label>
+            <select required id="sortID" name="sort">
+                <option value="brandSort">Brand A-Z</option>
+                <option value="costSort">Cost low-high</option>
+            </select>
+            <input type="submit" class="btn" value="Go!">
+        </form>
+    </div>
+
 <?php
 
 require_once 'db.php';
@@ -45,11 +51,7 @@ require_once 'db.php';
         echo "</div>";
     }
         echo "<div class=box> <a href='form.php'><h1>Add<br>Shoe<br>+</h1></a></div>";
-
-//$search = $_POST['search'];
-//$query = $db->prepare("SELECT `brand`, `name`, `colour`, `cost` FROM `shoes` WHERE `name` LIKE :search OR `colour` LIKE :search OR `brand` LIKE :search OR `colour` LIKE :search");
-//$query->bindParam(':search', $search);
-//echo "$search"
+    
 ?>
 </main>
 </body>

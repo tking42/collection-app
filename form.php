@@ -77,12 +77,12 @@ if (isset($_POST['brand']) && isset($_POST['name']) && isset($_POST['colour']) &
 
         if (gettype($_POST['name']) === 'string')
         {
-            $name = $_POST['name'];
+            $name = trim($_POST['name']);
         }
 
         if (gettype($_POST['colour']) === 'string')
         {
-            $colour = $_POST['colour'];
+            $colour = ucfirst(trim($_POST['colour']));
         }
 
         if ($_POST['cost'] === '')
