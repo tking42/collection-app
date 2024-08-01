@@ -14,7 +14,7 @@ require_once 'db.php';
     <h1>Trainer Tracker</h1>
     <h3>A virtual room to store your shoes...</h3>
 </nav>
-<form method="post" class="box">
+<form method="post" class="box" id="addForm">
         <a href="index.php">ⅹ</a>
         <h4>Add shoe to your collection: </h4>
     <div class="label">

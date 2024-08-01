@@ -21,10 +21,10 @@
                     <label for="sortID">Sort: </label>
                     <select required id="sortID" name="sort">
                         <option value="noSort">Please Select</option>
-                        <option value="brandSort">Brand A-Z</option>
-                        <option value="dscBrandSort">Brand Z-A</option>
-                        <option value="costSort">Cost low-high</option>
-                        <option value="dscCostSort">Cost high-low</option>
+                        <option value="brand">Brand A-Z</option>
+                        <option value="brand DESC">Brand Z-A</option>
+                        <option value="cost">Cost low-high</option>
+                        <option value="cost DESC">Cost high-low</option>
                     </select>
                     <input type="submit" value="Go!">
             </div>
@@ -56,7 +56,7 @@
 
 <?php
 
-require_once 'sort.php';
+require_once 'functions.php';
 
     echo "<div class=container>";
     foreach ($results as $shoe)
@@ -79,7 +79,7 @@ require_once 'sort.php';
         echo "</h4>";
         echo "</div>";
     }
-        echo "<div class=box> <a href='form.php'><h1>Add<br>Shoe<br>+</h1></a></div>";
+        echo "<div class=box id='addBox'> <a href='form.php'><h1>Add<br>Shoe<br>+</h1></a></div>";
     
 ?>
 </main>
