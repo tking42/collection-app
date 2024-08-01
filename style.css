@@ -15,7 +15,6 @@ nav {
 .sort {
     text-align: center;
     margin-bottom: 2rem;
-    background: #5a5a5a;
 }
 
 .sort div {
@@ -104,6 +103,12 @@ hr {
     margin-top: 4rem;
 }
 
+#addBox:hover {
+    border: solid lightblue 1px;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
 img {
     width: 100%;
     height: 15rem;
@@ -119,13 +124,16 @@ form a {
     padding: 0;
     margin-left: 18rem;
     justify-content: center;
-    color: black;
+    color: lightgray;
+}
+
+#addForm {
+    margin-top: 2rem;
 }
 
 form h4 {
     text-align: center;
     margin-top: 0;
-    color: black;
 }
 
 form {
@@ -189,6 +197,7 @@ form div {
     .sort {
         display: flex;
         justify-content: space-around;
+        background: #5a5a5a;
     }
 }
 
