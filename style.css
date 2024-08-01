@@ -8,14 +8,13 @@ body {
 
 nav {
     background-color: white;
-
     color: cadetblue;
     margin-bottom: 2rem;
     padding: 2rem;
-
 }
 
 .sort {
+    justify-content: center;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -23,13 +22,20 @@ nav {
 .sort select {
     border-radius: 10%;
     border: none;
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .sort label {
     color: white;
     font-family: "Archivo Black", sans-serif;
     letter-spacing: 0.1rem;
+}
+
+.sort input {
+    margin-left: 0;
+    background-color: white;
+    border: white;
+    border-radius: 5%;
 }
 
 h1 {

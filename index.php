@@ -18,10 +18,11 @@
         <form method="post" action="index.php">
             <label for="sortID">Sort By: </label>
             <select required id="sortID" name="sort">
+                <option value="noSort">Please Select</option>
                 <option value="brandSort">Brand A-Z</option>
                 <option value="costSort">Cost low-high</option>
             </select>
-            <input type="submit" class="btn" value="Go!">
+            <input type="submit" value="Go!">
         </form>
     </div>
 
