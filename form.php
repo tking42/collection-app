@@ -8,7 +8,6 @@ require_once 'db.php';
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-
 </head>
 <body>
 <nav>
@@ -56,7 +55,6 @@ require_once 'db.php';
         <label for="imgID">Image: </label>
         <input id="imgID" name="image" type="text" placeholder="e.g. adidasSambas.png">
     </div>
-
     <br>
     <div>
         <input type="submit" class="btn">
@@ -69,7 +67,6 @@ require_once 'db.php';
 
 if (isset($_POST['brand']) && isset($_POST['name']) && isset($_POST['colour']) && isset($_POST['cost']) && isset($_POST['image']))
 {
-
         if ($_POST['brand'] !== 'select')
         {
             $brand = $_POST['brand'];
