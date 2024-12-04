@@ -10,11 +10,11 @@ require_once 'db.php';
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav>
+<header>
     <h1>Trainer Tracker</h1>
     <h3>A virtual room to store your shoes...</h3>
-</nav>
-<form method="post" class="box">
+</header>
+<form method="post" class="box" id="addForm">
         <a href="index.php">ⅹ</a>
         <h4>Add shoe to your collection: </h4>
     <div class="label">
@@ -102,13 +102,16 @@ if (isset($_POST['brand']) && isset($_POST['name']) && isset($_POST['colour']) &
             $image = 'placeholder.png';
         }
 
-    $query = $db->prepare("INSERT INTO `shoes` (`brand`, `name`, `colour`, `cost`, `image`) VALUES (:brand, :name, :colour, :cost, :image);");
+        $date = date('Y-m-d H:i:s');
+
+    $query = $db->prepare("INSERT INTO `shoes` (`brand`, `name`, `colour`, `cost`, `image`, `dateAdded`) VALUES (:brand, :name, :colour, :cost, :image, :dateAdded);");
 
     $query->bindParam(':brand', $brand);
     $query->bindParam(':name', $name);
     $query->bindParam(':colour', $colour);
     $query->bindParam(':cost', $cost);
     $query->bindParam(':image', $image);
+    $query->bindParam(':dateAdded', $date);
 
     $query->execute();
 }

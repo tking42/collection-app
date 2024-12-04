@@ -6,22 +6,23 @@ body {
     font-family: "Archivo Black", sans-serif;
 }
 
-nav {
+header {
     background-color: white;
     color: cadetblue;
     padding: 2rem;
 }
 
-.sort {
-    text-align: center;
-    margin-bottom: 2rem;
-    background: #5a5a5a;
+.sort form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
 }
 
-.sort div {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+
+.sort {
+    margin-bottom: 2rem;
+    background: #5a5a5a;
 }
 
 .sort select {
@@ -40,6 +41,15 @@ nav {
     background-color: white;
     border: white;
     border-radius: 5%;
+}
+
+#filterID {
+    font-family: Arial;
+    margin-left: 0;
+}
+
+#sortID {
+    font-family: Arial;
 }
 
 h1 {
@@ -83,8 +93,8 @@ hr {
     flex-direction: column;
     background-color: white;
     color: #5a5a5a;
-    width: 15rem;
-    height: 25rem;
+    width: 17rem;
+    height: 30rem;
     border-radius: 5%;
     border: lightgray;
     padding-bottom: 1rem;
@@ -97,6 +107,18 @@ hr {
 
 .box a {
     text-decoration: none;
+    color: cadetblue;
+}
+
+.date {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.remove {
+    text-align: center;
+    color: cadetblue;
+    font-style: italic;
 }
 
 .box h1 {
@@ -104,12 +126,35 @@ hr {
     margin-top: 4rem;
 }
 
+#addBox:hover {
+    border: solid lightblue 1px;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
 img {
     width: 100%;
-    height: 15rem;
+    height: 16rem;
     border-radius: 5%;
     object-fit: cover;
     background-color: white;
+}
+
+.reset {
+    display: block;
+}
+
+nav {
+    color: cadetblue;
+    text-align: center;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+nav a {
+    color: white;
+    font-style: italic;
+    letter-spacing: 0.2rem;
 }
 
 /*Form page*/
@@ -119,13 +164,16 @@ form a {
     padding: 0;
     margin-left: 18rem;
     justify-content: center;
-    color: black;
+    color: lightgray;
+}
+
+#addForm {
+    margin-top: 2rem;
 }
 
 form h4 {
     text-align: center;
     margin-top: 0;
-    color: black;
 }
 
 form {
@@ -177,6 +225,14 @@ form div {
         color: black;
     }
 
+    #removeForm {
+        margin-top: 2rem;
+    }
+
+    #radio {
+        margin-bottom: 1rem;
+    }
+
 @media screen and (min-width: 640px) {
 
     .container {
@@ -186,9 +242,15 @@ form div {
         margin: 2rem 5rem;
     }
 
-    .sort {
-        display: flex;
-        justify-content: space-around;
+  .sort form
+  {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-evenly;
+  }
+
+    #filterID {
+        margin-left: 1rem;
     }
 }
 
